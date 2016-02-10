@@ -4,6 +4,7 @@ import java.util.Collections;
 public class Deck
 	{
 		static ArrayList <Card> deck = new ArrayList<Card>();
+		static ArrayList <Card> pickup = new ArrayList<Card>();
 		static ArrayList <Card> playerHand = new ArrayList<Card>();
 		static ArrayList <Card> computerHand = new ArrayList<Card>();
 		static ArrayList <Card> playerPartnerHand = new ArrayList<Card>();
@@ -59,6 +60,8 @@ public class Deck
 			deck.add(new Card(12, 10, false, 0 ,false, false));
 			deck.add(new Card(12, 11, false, 0 ,false, false));
 			deck.add(new Card(12, 12, true, 0 ,false, false));
+			deck.add(new Card(0, 0, true, 0, false, true));
+			deck.add(new Card(5, 5, true, 0, true, false));
 			Collections.shuffle(deck);
 		}
 
@@ -83,6 +86,8 @@ public class Deck
 							computerPartnerHand.add(deck.get(i));
 						}
 				}
+			pickup.add(deck.get(48));
+			pickup.add(deck.get(49));
 			
 		}
 		public static ArrayList<Card> getDeck()
