@@ -5,10 +5,10 @@ public class Deck
 	{
 		static ArrayList <Card> deck = new ArrayList<Card>();
 		static ArrayList <Card> pickup = new ArrayList<Card>();
-		static ArrayList <Card> playerHand = new ArrayList<Card>();
-		static ArrayList <Card> computerHand = new ArrayList<Card>();
-		static ArrayList <Card> playerPartnerHand = new ArrayList<Card>();
-		static ArrayList <Card> computerPartnerHand = new ArrayList<Card>();
+		static ArrayList <Card> playerOneHand = new ArrayList<Card>();
+		static ArrayList <Card> playerTwoHand = new ArrayList<Card>();
+		static ArrayList <Card> playerThreeHand = new ArrayList<Card>();
+		static ArrayList <Card> playerFourHand = new ArrayList<Card>();
 		
 		public static void getShuffledDeck()
 		{
@@ -71,73 +71,86 @@ public class Deck
 				{
 					if (i%4 == 0)
 						{
-							playerHand.add(deck.get(i));
+							playerOneHand.add(deck.get(i));
 						}
 					else if (i%4 == 1)
 						{
-							computerHand.add(deck.get(i));
+							playerTwoHand.add(deck.get(i));
 						}
 					else if (i%4 == 2)
 						{
-							playerPartnerHand.add(deck.get(i));
+							playerThreeHand.add(deck.get(i));
 						}
 					else if (i%4 == 3)
 						{
-							computerPartnerHand.add(deck.get(i));
+							playerFourHand.add(deck.get(i));
 						}
 				}
 			pickup.add(deck.get(48));
 			pickup.add(deck.get(49));
 			
 		}
+
 		public static ArrayList<Card> getDeck()
 			{
 				return deck;
 			}
+
 		public static void setDeck(ArrayList<Card> deck)
 			{
 				Deck.deck = deck;
 			}
 
-		public static ArrayList<Card> getPlayerHand()
+		public static ArrayList<Card> getPickup()
 			{
-				return playerHand;
+				return pickup;
 			}
 
-		public static void setPlayerHand(ArrayList<Card> playerHand)
+		public static void setPickup(ArrayList<Card> pickup)
 			{
-				Deck.playerHand = playerHand;
+				Deck.pickup = pickup;
 			}
 
-		public static ArrayList<Card> getComputerHand()
+		public static ArrayList<Card> getPlayerOneHand()
 			{
-				return computerHand;
+				return playerOneHand;
 			}
 
-		public static void setComputerHand(ArrayList<Card> computerHand)
+		public static void setPlayerOneHand(ArrayList<Card> playerOneHand)
 			{
-				Deck.computerHand = computerHand;
+				Deck.playerOneHand = playerOneHand;
 			}
 
-		public static ArrayList<Card> getPlayerPartnerHand()
+		public static ArrayList<Card> getPlayerTwoHand()
 			{
-				return playerPartnerHand;
+				return playerTwoHand;
 			}
 
-		public static void setPlayerPartnerHand(ArrayList<Card> playerPartnerHand)
+		public static void setPlayerTwoHand(ArrayList<Card> playerTwoHand)
 			{
-				Deck.playerPartnerHand = playerPartnerHand;
+				Deck.playerTwoHand = playerTwoHand;
 			}
 
-		public static ArrayList<Card> getComputerPartnerHand()
+		public static ArrayList<Card> getPlayerThreeHand()
 			{
-				return computerPartnerHand;
+				return playerThreeHand;
 			}
 
-		public static void setComputerPartnerHand(ArrayList<Card> computerPartnerHand)
+		public static void setPlayerThreeHand(ArrayList<Card> playerThreeHand)
 			{
-				Deck.computerPartnerHand = computerPartnerHand;
+				Deck.playerThreeHand = playerThreeHand;
 			}
+
+		public static ArrayList<Card> getPlayerFourHand()
+			{
+				return playerFourHand;
+			}
+
+		public static void setPlayerFourHand(ArrayList<Card> playerFourHand)
+			{
+				Deck.playerFourHand = playerFourHand;
+			}
+
 		
 	}
 

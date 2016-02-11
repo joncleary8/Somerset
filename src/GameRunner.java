@@ -9,6 +9,7 @@ public class GameRunner
 				Introduction.choosePartners();
 				Deck.getShuffledDeck();
 				Deck.dealDeck();
+				Hand.bid();
 //				for (Card fred : Deck.playerHand)
 //					{
 //						if (!fred.isSS() && !fred.isOO())
