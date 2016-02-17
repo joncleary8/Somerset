@@ -1,10 +1,10 @@
 
 public class Player
 	{
-		public String playerName;
-		public int playerNumber;
-		public int playerTeamNumber;
-		public int playerHand;
+		private String playerName;
+		private int playerNumber;
+		private int playerTeamNumber;
+		private int playerHand;
 		public Player (String p,int pN, int pTN, int pH)
 		{
 			playerName = p;
